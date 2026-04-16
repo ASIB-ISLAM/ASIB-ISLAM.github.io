@@ -1,128 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official Portfolio of Asib Islam (ASIB). Digital Creator, SEO Specialist, and ICT Enthusiast. Discover ASIB's projects and skills.">
-    <meta name="keywords" content="ASIB, Asib Islam, Asib, ASIB Portfolio, SEO Expert Bangladesh, ICT Student, Odyssey YouTube, Asib SEO, Web Developer Asib">
-    <meta name="author" content="Asib Islam">
-    
-    <title>ASIB | Official Home Page</title>
+    <meta name="description" content="আসিবি ইসলামের অফিসিয়াল প্রফেশনাল পোর্টফোলিও। আইসিটি, এসইও, এবং ডিজিটাল কন্টেন্ট ক্রিয়েটর।">
+    <meta name="keywords" content="Asib Islam, ASIB, SEO Expert Bangladesh, ICT Student, Odyssey YouTube, Forex Trading">
+    <title>ASIB | Digital Professional Portfolio</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg-color: #0b0f19;
+            --bg: #0b0f19;
             --card-bg: #161b22;
-            --accent-color: #58a6ff;
+            --accent: #58a6ff;
+            --accent-hover: #1f6feb;
             --text-main: #ffffff;
             --text-dim: #8b949e;
-            --success: #238636;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
 
-        /* Responsive Navigation */
+        /* --- প্রফেশনাল মেনু বার (Top Left) --- */
         nav {
-            background: rgba(11, 15, 25, 0.95);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(11, 15, 25, 0.98);
             padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
             z-index: 1000;
             border-bottom: 1px solid #30363d;
         }
 
-        .logo { font-size: 1.5rem; font-weight: 700; color: var(--accent-color); letter-spacing: 2px; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--accent); letter-spacing: 2px; }
 
-        /* Hero Section */
-        .hero {
-            height: 80vh;
+        .nav-links { display: flex; gap: 25px; list-style: none; }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 0;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        /* প্রফেশনাল হভার এফেক্ট (Underline) */
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover { color: var(--text-main); }
+        .nav-links a:hover::after { width: 100%; }
+
+        /* --- সেকশন স্টাইলিং --- */
+        section {
+            min-height: 100vh;
+            padding: 100px 5% 60px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            background: radial-gradient(circle at center, #1e293b 0%, #0b0f19 100%);
         }
 
-        .hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); margin-bottom: 10px; }
-        .hero span { color: var(--accent-color); }
-        .hero p { font-size: 1.2rem; color: var(--text-dim); max-width: 600px; }
+        .container { max-width: 1100px; margin: auto; }
 
-        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 800; margin-bottom: 20px; }
+        h1 span { color: var(--accent); }
+        h2 { font-size: 2.5rem; color: var(--accent); margin-bottom: 40px; border-left: 5px solid var(--accent); padding-left: 20px; }
+        h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--text-main); }
 
-        /* Section Styling */
-        section { margin-bottom: 60px; scroll-margin-top: 80px; }
-        h2 { font-size: 2rem; margin-bottom: 30px; border-left: 5px solid var(--accent-color); padding-left: 15px; }
+        p { color: var(--text-dim); font-size: 1.1rem; margin-bottom: 20px; max-width: 800px; }
 
-        /* Grid Layouts */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
+        /* --- কার্ড গ্রিড (Projects/Skills) --- */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        
         .card {
             background: var(--card-bg);
-            padding: 30px;
+            padding: 40px;
             border-radius: 12px;
             border: 1px solid #30363d;
-            transition: 0.3s ease;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
         }
 
-        .card:hover { transform: translateY(-10px); border-color: var(--accent-color); }
+        .card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(88, 166, 255, 0.1); }
 
         .skill-tag {
             display: inline-block;
             background: rgba(88, 166, 255, 0.1);
-            color: var(--accent-color);
-            padding: 5px 15px;
+            color: var(--accent);
+            padding: 6px 18px;
             border-radius: 20px;
             margin: 5px;
             font-size: 0.9rem;
             font-weight: 600;
         }
 
-        /* Buttons */
+        /* --- বাটন স্টাইল --- */
         .btn {
             display: inline-block;
-            padding: 12px 30px;
-            background: var(--accent-color);
+            padding: 12px 35px;
+            background-color: var(--accent);
             color: #fff;
             text-decoration: none;
             border-radius: 6px;
             font-weight: 600;
-            margin-top: 20px;
-            transition: 0.3s;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
         }
 
-        .btn:hover { opacity: 0.8; transform: scale(1.05); }
+        .btn:hover { background-color: var(--accent-hover); transform: scale(1.05); }
 
-        /* Footer */
+        /* --- মোটিভেশনাল টেক্সট --- */
+        .motivation-quote {
+            font-size: 1.3rem;
+            color: var(--text-dim);
+            font-style: italic;
+            border-left: 3px solid var(--accent);
+            padding-left: 25px;
+            margin: 30px 0;
+        }
+
+        /* --- কন্টাক্ট সেকশন --- */
+        .contact-info { text-align: center; }
+        .contact-email { font-size: 1.5rem; color: var(--accent); font-weight: 700; margin: 20px 0; }
+
+        /* --- ফুটার --- */
         footer {
             text-align: center;
-            padding: 40px;
+            padding: 40px 5%;
             border-top: 1px solid #30363d;
             color: var(--text-dim);
+            font-size: 0.9rem;
         }
 
-        /* Device Specific Fixes */
+        /* --- মোবাইল রেসপন্সিভ (Mobile Menu Fix) --- */
         @media (max-width: 768px) {
-            .hero { height: 60vh; }
-            h2 { font-size: 1.6rem; }
+            nav { padding: 1rem 3%; flex-direction: column; gap: 10px; }
+            .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
+            .nav-links a { font-size: 0.85rem; }
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 2rem; }
+            section { padding-top: 140px; }
         }
     </style>
 </head>
@@ -130,61 +168,87 @@
 
     <nav>
         <div class="logo">ASIB</div>
-        <div style="color: var(--text-dim); font-size: 0.9rem;">Portfolio 2026</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
     <header class="hero" id="home">
-        <h1>Hi, I'm <span>ASIB</span></h1>
-        <p>Expert in SEO, Digital Content Strategy, and Future ICT Professional. Building the next generation of digital experiences.</p>
-        <a href="#contact" class="btn">Get In Touch</a>
+        <div class="container">
+            <h1>THIS IS <span>ASIB</span></h1>
+            <p>ডিজিটাল কন্টেন্ট স্ট্র্যাটেজিস্ট, এসইও বিশেষজ্ঞ এবং ভবিষ্যৎ আইসিটি পেশাদার। আমি পরবর্তী প্রজন্মের জন্য ডিজিটাল উদ্ভাবন এবং অনুপ্রেরণার পথ তৈরি করছি।</p>
+            <a href="#projects" class="btn">আমার কাজগুলো দেখুন</a>
+        </div>
     </header>
 
     <div class="container">
         
         <section id="about">
-            <h2>About ASIB</h2>
+            <h2>আমার সম্পর্কে</h2>
             <div class="card">
-                <p>I am <strong>Asib Islam</strong>, a tech enthusiast from Bangladesh with a deep focus on <strong>ICT and Digital Platforms</strong>. After completing my HSC, I have dedicated myself to mastering Search Engine Optimization (SEO) and Web Technologies. My mission is to merge technical excellence with creative storytelling through my projects like <strong>Odyssey</strong>.</p>
+                <h3>আসিব ইসলাম</h3>
+                <p>আমি একজন অত্যন্ত অনুপ্রাণিত প্রযুক্তিপ্রেমী, যে HSC সম্পন্ন করার পর ICT এবং ডিজিটাল প্ল্যাটফর্মের ওপর গভীরভাবে মনোযোগ দিচ্ছে। আমি বিশ্বাস করি প্রযুক্তি হলো পরিবর্তনের চাবিকাঠি। আমার লক্ষ্য হলো আন্তর্জাতিক মানের আইসিটি শিক্ষা গ্রহণ করে নিজেকে বৈশ্বিক প্রতিযোগিতায় যোগ্য করে তোলা।</p>
+                <div class="motivation-quote">
+                    "পরবর্তী প্রজন্ম কেবল পথ অনুসরণ করে না, তারা পথ তৈরি করে। আপনার কৌতূহলই আপনার সবচেয়ে বড় সম্পদ—এটিতে বিনিয়োগ করা কখনো বন্ধ করবেন না।"
+                </div>
             </div>
         </section>
 
         <section id="skills">
-            <h2>Core Expertise</h2>
+            <h2>আমার দক্ষতা</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Search Engine Optimization</h3>
-                    <p>Dominating search results using advanced SEO techniques and YouTube algorithm strategies.</p>
-                    <div style="margin-top:15px;">
+                    <h3>সার্চ ইঞ্জিন অপ্টিমাইজেশান</h3>
+                    <p>গুগল এবং ইউটিউবের অ্যালগরিদম বুঝতে এবং ব্যবহার করতে সক্ষম। কন্টেন্ট র‍্যাঙ্কিংয়ে বিশেষ দক্ষতা।</p>
+                    <div>
                         <span class="skill-tag">Keyword Research</span>
                         <span class="skill-tag">On-Page SEO</span>
                     </div>
                 </div>
                 <div class="card">
-                    <h3>Technical Skills</h3>
-                    <p>Pro-level handling of HTML, CSS, and modern web hosting via GitHub Pages.</p>
-                    <div style="margin-top:15px;">
+                    <h3>ওয়েব ডিজাইন</h3>
+                    <p>HTML, CSS এবং Git/GitHub ব্যবহার করে আধুনিক, রেসপন্সিভ ওয়েবসাইট তৈরির প্রাথমিক জ্ঞান।</p>
+                    <div>
                         <span class="skill-tag">Web Design</span>
-                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">Responsive UI</span>
                     </div>
                 </div>
                 <div class="card">
-                    <h3>Trading & Analysis</h3>
-                    <p>Expertise in Financial Markets including Forex and Cryptocurrency analysis.</p>
-                    <div style="margin-top:15px;">
+                    <h3>ট্রেডিং ও এনালাইসিস</h3>
+                    <p>ফরেক্স এবং ক্রিপ্টোকারেন্সি মার্কেটের টেকনিক্যাল এবং ফান্ডামেন্টাল এনালাইসিস।</p>
+                    <div>
                         <span class="skill-tag">Forex</span>
-                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Market Analysis</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" style="text-align: center;">
-            <h2>Let's Work Together</h2>
-            <p>Ready to take your project to the next level? Contact me for collaborations.</p>
-            <p style="margin-top: 10px; color: var(--accent-color); font-weight: 700;">asibislam277@gmail.com</p>
-            <div style="margin-top: 20px;">
-                <a href="#" class="btn" style="background: #333;">GitHub</a>
-                <a href="#" class="btn" style="background: #0077b5;">LinkedIn</a>
+        <section id="projects">
+            <h2>প্রজেক্ট এবং অভিজ্ঞতা</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Odyssey (ইউটিউব চ্যানেল)</h3>
+                    <p>মহাকাশ ইতিহাস এবং স্যাটেলাইট মিশন নিয়ে একটি বিশেষ চ্যানেল পরিচালনা করছি। কন্টেন্ট ক্রিয়েশন এবং এসইও স্ট্র্যাটেজির বাস্তব অভিজ্ঞতা।</p>
+                    <a href="#" class="btn" style="background: #e62117;">YouTube এ দেখুন</a>
+                </div>
+                <div class="card">
+                    <h3>এই পোর্টফোলিও ওয়েবসাইট</h3>
+                    <p>এটি আমার প্রথম সম্পূর্ণ রেসপন্সিভ মাল্টি-পেজ প্রজেক্ট, যা গিটহাব পেজেস-এ হোস্ট করা হয়েছে। কোডিং এবং হোস্টিং শেখার বাস্তব প্রমাণ।</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="card contact-info">
+                <h2>যোগাযোগ করুন</h2>
+                <p>নতুন কোনো প্রজেক্ট বা সহযোগিতার জন্য আমার সাথে যোগাযোগ করতে পারেন।</p>
+                <p class="contact-email">asibislam277@gmail.com</p>
+                <a href="mailto:asibislam277@gmail.com" class="btn">ইমেইল করুন</a>
             </div>
         </section>
 
@@ -192,7 +256,7 @@
 
     <footer>
         <p>&copy; 2026 <strong>ASIB ISLAM</strong>. All Rights Reserved.</p>
-        <p style="font-size: 0.8rem; margin-top: 10px;">Built with Precision for Global Reach</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">আন্তর্জাতিক বিশ্ববিদ্যালয় ও ভিসা আবেদনের জন্য অপ্টিমাইজড।</p>
     </footer>
 
 </body>
