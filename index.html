@@ -696,30 +696,25 @@
         <p class="content-text" style="font-size: 13px; color: #54595d;">
             You can drop your thoughts, include popular profile links, or attach files/images. Directly paste images inside the box to automatically link them.
         </p>
- <div class="comment-section">
-    <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+<div class="comment-section" style="max-width: 100%; margin-top: 20px;">
+    <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" style="display: flex; flex-direction: column; gap: 15px;">
         <input type="hidden" name="access_key" value="c85616e1-1411-4561-82b9-4684682e8ecf">
         
-        <input type="hidden" name="redirect" value="https://asib-islam.github.io/">
+        <input type="hidden" name="redirect" value="https://asib-islam.github.io/#contact">
 
-        <div class="input-row">
-            <input type="text" name="name" placeholder="Your Name (Required Field)" required>
-            <input type="email" name="email" placeholder="Your Popular Profile Link / Email (Optional)">
+        <div class="textarea-container" style="position: relative; width: 100%;">
+            <textarea name="comment" placeholder="Write comment, drop your thoughts, or paste links here..." style="width: 100%; min-height: 120px; padding: 12px; padding-right: 50px; border: 1px solid #a2a9b1; border-radius: 4px; box-sizing: border-box; font-family: inherit; resize: vertical;"></textarea>
+            <button type="submit" class="send-aero-btn" style="position: absolute; right: 15px; bottom: 15px; background: none; border: none; font-size: 20px; color: #3366cc; cursor: pointer; padding: 0;">➤</button>
         </div>
 
-        <div class="textarea-container">
-            <textarea name="message" placeholder="Write comment or paste images/text data here... (Required Field)" required></textarea>
-            <button type="submit" class="send-aero-btn" style="cursor: pointer;">➤</button>
-        </div>
-
-        <div class="form-actions" style="display: flex; align-items: center; justify-content: flex-start; margin-top: 10px;">
-            <div class="file-input-wrapper" style="position: relative; display: inline-flex; align-items: center; gap: 10px;">
-                <span class="file-label" style="background-color: #f8f9fa; border: 1px solid #a2a9b1; color: #202122; padding: 6px 12px; border-radius: 2px; cursor: pointer;">
+        <div class="form-actions" style="display: flex; align-items: center; justify-content: flex-start; gap: 15px; margin-top: 5px;">
+            <div class="file-input-wrapper" style="position: relative; display: inline-flex; align-items: center;">
+                <span class="file-label" style="background-color: #f8f9fa; border: 1px solid #a2a9b1; color: #202122; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">
                     🔗 Attach File / Picture
                 </span>
                 <input type="file" name="attachment" style="position: absolute; left: 0; top: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer;">
             </div>
-            <strong style="margin-left: 15px;">ASIB</strong>
+            
         </div>
     </form>
 </div>       
