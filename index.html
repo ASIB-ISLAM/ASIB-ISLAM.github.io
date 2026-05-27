@@ -701,12 +701,12 @@
 <form class="comment-form" id="msgForm" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="access_key" value="c85616e1-1411-4561-82b9-4684682e8ecf">
                 <div class="input-row">
-                    <input type="text" id="visitorName" name="Name" placeholder="Your Name (Required Field)">
+                    <input type="text" id="visitorName" name="name" placeholder="Your Name (Required Field)">
                     <input type="text" id="visitorEmail" name="Link_or_Email" placeholder="Your Popular Profile Link / Email (Optional)">
                 </div>
                 
                 <div class="textarea-container">
-                    <textarea id="visitorMsg" name="Message" placeholder="Write comment or paste images/text data here... (Required Field)"></textarea>
+                    <textarea id="visitorMsg" name="message" placeholder="Write comment or paste images/text data here... (Required Field)"></textarea>
                     <button type="submit" class="send-aero-btn">➤</button>
                 </div>
                 
@@ -715,7 +715,7 @@
         <span class="file-label" style="background-color: #f8f9fa; border: 1px solid #a2a9b1; color: #202122; padding: 6px 12px; border-radius: 2px; cursor: pointer; font-size: 12px; display: inline-flex; align-items: center; gap: 4px; transition: all 0.2s ease;">
             🔗 Attach File / Picture
         </span>
-        <input type="file" id="fileField" name="Attachment" onchange="fileSelected()" style="position: absolute; left: 0; top: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer;">
+        <input type="file" id="fileField" name="attachment" onchange="fileSelected()" style="position: absolute; left: 0; top: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer;">
         <span id="file-chosen" style="color: #54595d; font-size: 12px; font-weight: 500; white-space: nowrap; max-width: 200px; overflow: hidden; text-overflow: ellipsis; vertical-align: middle;"></span>
     </div>
 </div><strong>ASIB</strong>
