@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asib Islam | Search Engine Visibility Specialist & Technical SEO Expert</title>
-    <meta name="description" content="Professional portfolio of Asib Islam. Specialized in Technical Data Analysis, Active/Passive Trading, Web Development, SEO Visibility, and Cyber Security OSINT Guide,Online Mentor.">
-    <meta name="keywords" content="Asib Islam, Asib Islam SEO, Trading Expert Asib, OSINT Specialist, Cyber Security Bangladesh, Data Analyst, Content Creator, Online Mentor, Asib CV, Technical Analyst, Frontend Optimization, Digital Footprint Analyst, Search Engine Visibility Specialist, Strategic Financial Planner">
+    <meta name="description" content="Professional portfolio of Asib Islam. Specialized in Technical Data Analysis, Active/Passive Trading, Web Development, SEO Visibility, and Cyber Security OSINT Guide.">
+    <meta name="keywords" content="Asib Islam, Asib Islam SEO, Trading Expert Asib, OSINT Specialist, ASIB, Cyber Security Bangladesh, Data Analyst, Content Creator, Online Mentor, Asib CV, Technical Analyst, Frontend Optimization, Digital Footprint Analyst, Search Engine Visibility Specialist, Strategic Financial Planner">
     
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -16,7 +16,6 @@
     </script>
 
     <style>
-        /* AUTHENTIC WIKIPEDIA-STYLE LIGHT MINIMALIST THEME */
         * {
             margin: 0;
             padding: 0;
@@ -30,7 +29,7 @@
 
         body {
             background-color: #ffffff;
-            color: #202122; /* High-contrast standard charcoal black, text jhapsa hobe na */
+            color: #202122;
             line-height: 1.6;
             font-size: 14px;
             padding-top: 50px;
@@ -65,7 +64,7 @@
         }
 
         nav a {
-            color: #3366cc; /* Standard web-blue link color */
+            color: #3366cc;
             text-decoration: none;
             font-size: 14px;
             font-weight: 500;
@@ -79,7 +78,6 @@
             border-bottom: 2px solid #3366cc;
         }
 
-        /* DYNAMIC NAVIGATION-BAR SURVEY POPUP (SLIM FLOATING LAYER) */
         #survey-box {
             position: absolute;
             left: 50%;
@@ -87,18 +85,24 @@
             transform: translate(-50%, -50%);
             background: #ffffff;
             border: 1px solid #a2a9b1;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 4px 12px;
-            border-radius: 2px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+            padding: 8px 16px;
+            border-radius: 4px;
             display: none;
             flex-direction: column;
             align-items: center;
-            gap: 1px;
+            gap: 4px;
             z-index: 1001;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translate(-50%, -45%); }
+            to { opacity: 1; transform: translate(-50%, -50%); }
         }
 
         #survey-box p {
-            font-size: 11px;
+            font-size: 12px;
             color: #202122;
             margin: 0;
             font-weight: bold;
@@ -106,8 +110,8 @@
 
         .survey-options-row {
             display: flex;
-            gap: 10px;
-            margin-top: 1px;
+            gap: 12px;
+            margin-top: 2px;
         }
 
         .survey-options-row label {
@@ -116,7 +120,14 @@
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 3px;
+            gap: 4px;
+            padding: 2px 6px;
+            border-radius: 2px;
+            transition: background 0.2s ease;
+        }
+
+        .survey-options-row label:hover {
+            background: #eaecf0;
         }
 
         .survey-options-row input[type="radio"] {
@@ -132,7 +143,7 @@
             margin: 0 auto;
         }
 
-        h1, h2 {
+        h1, h2, h3 {
             color: #000000;
             font-weight: normal;
             border-bottom: 1px solid #a2a9b1;
@@ -142,6 +153,7 @@
 
         h1 { font-size: 24px; }
         h2 { font-size: 20px; }
+        h3 { font-size: 16px; border-bottom: none; margin-bottom: 8px; font-weight: bold; }
 
         .content-text {
             color: #202122;
@@ -150,11 +162,17 @@
             font-size: 14px;
         }
 
+        .content-text-short {
+            font-size: 13px;
+            color: #202122;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
         strong {
             color: #000000;
         }
 
-        /* HOME SECTION LAYOUT LOCK (PERFECT RECONSTRUCTED MECHANICS) */
         .home-container {
             display: flex;
             align-items: flex-start;
@@ -162,24 +180,166 @@
             width: 100%;
         }
 
-        .profile-wrapper {
+        .wiki-sidebar {
+            width: 260px;
             flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .profile-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
         .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%; /* Perfect Circle Shape */
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
             border: 1px solid #a2a9b1;
-            object-fit: cover; /* Photo flat ba dimbkriti hobe na */
+            object-fit: cover;
             aspect-ratio: 1 / 1;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.04);
+        }
+
+        .meta-summary-card {
+            background-color: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            border-radius: 2px;
+            padding: 12px;
+            width: 100%;
+        }
+
+        .meta-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            border-bottom: 1px solid #eaecf0;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .meta-list li {
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #202122;
+            font-weight: 500;
+            transition: transform 0.2s ease, padding-left 0.2s ease;
+        }
+
+        .meta-list li:hover {
+            transform: translateX(4px);
+            color: #3366cc;
+        }
+
+        .meta-info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            border-bottom: 1px solid #eaecf0;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .meta-info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            transition: transform 0.2s ease;
+        }
+
+        .meta-info-item:hover {
+            transform: translateX(4px);
+        }
+
+        .meta-info-text span {
+            display: block;
+            font-size: 10px;
+            color: #54595d;
+            text-transform: uppercase;
+        }
+
+        .meta-info-text strong {
+            font-size: 12px;
+        }
+
+        .mail-injection-box {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .mail-injection-box label {
+            font-size: 11px;
+            font-weight: bold;
+            color: #54595d;
+        }
+
+        .mail-input-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #ffffff;
+            border: 1px solid #a2a9b1;
+            padding: 4px 8px;
+            border-radius: 2px;
+            transition: border-color 0.2s ease;
+        }
+
+        .mail-input-wrapper:hover {
+            border-color: #3366cc;
+        }
+
+        .mail-provider-favicon {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+            display: none;
+        }
+
+        .mail-static-text {
+            font-size: 12px;
+            color: #3366cc;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .home-text-block {
             flex-grow: 1;
         }
 
-        /* CONTACT FORM AREA (SLIM HORIZONTAL USER-FRIENDLY STRUCTURE) */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .about-card {
+            background: #ffffff;
+            border-left: 3px solid #3366cc;
+            padding-left: 15px;
+            margin-bottom: 5px;
+            transition: transform 0.2s ease, border-left-color 0.2s ease;
+        }
+
+        .about-card:hover {
+            transform: translateX(5px);
+            border-left-color: #202122;
+        }
+
         .comment-section {
             width: 100%;
             margin-top: 25px;
@@ -198,8 +358,7 @@
             width: 100%;
         }
 
-        .comment-form input[type="text"],
-        .comment-form textarea {
+        .comment-form input[type="text"] {
             background-color: #ffffff;
             border: 1px solid #a2a9b1;
             border-radius: 2px;
@@ -210,15 +369,58 @@
             transition: border-color 0.15s ease;
         }
 
-        .comment-form input[type="text"]:focus,
-        .comment-form textarea:focus {
+        .comment-form input[type="text"]:focus {
             border-color: #3366cc;
             outline: none;
         }
 
+        .textarea-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            background: #ffffff;
+            border: 1px solid #a2a9b1;
+            border-radius: 2px;
+            padding-right: 45px;
+            transition: border-color 0.15s ease;
+        }
+
+        .textarea-container:focus-within {
+            border-color: #3366cc;
+        }
+
         .comment-form textarea {
+            width: 100%;
             height: 60px;
             resize: none;
+            border: none;
+            outline: none;
+            font-size: 13px;
+            color: #202122;
+            background: transparent;
+            padding: 8px 5px;
+        }
+
+        .send-aero-btn {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #3366cc;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.15s ease, color 0.15s ease;
+        }
+
+        .send-aero-btn:hover {
+            transform: translateY(-50%) scale(1.2) rotate(-10deg);
+            color: #202122;
         }
 
         .form-actions {
@@ -265,82 +467,55 @@
             font-size: 12px;
         }
 
-        .comment-form button {
-            background-color: #f8f9fa;
-            border: 1px solid #a2a9b1;
-            color: #3366cc;
-            padding: 8px 20px;
-            border-radius: 2px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 13px;
-            transition: all 0.2s ease;
-        }
-
-        .comment-form button:hover {
-            background-color: #3366cc;
-            color: #ffffff;
-            border-color: #3366cc;
-        }
-
         #success-msg {
             color: #008000;
             font-size: 13px;
             margin-top: 15px;
             display: none;
             font-weight: bold;
+            padding: 8px;
+            background-color: #f0fbf0;
+            border: 1px solid #a2dba2;
+            border-radius: 2px;
         }
 
-        /* INFINITE DYNAMIC FAVICON SOCIAL INJECTOR CONTAINER */
-        .dynamic-favicon-wrapper {
+        .dynamic-horizontal-footer {
             width: 100%;
-            border-top: 1px solid #eaecf0;
-            margin-top: 30px;
-            padding-top: 20px;
-            display: flex;
-            justify-content: center; /* Horizontally centered */
-            align-items: center;
-            gap: 15px;
-            flex-wrap: wrap; /* Jato khushi toto link layout break chara automatic multiple row banābe */
-        }
-
-        .dynamic-fav-icon {
-            width: 24px;
-            height: 24px;
-            object-fit: contain;
-            border-radius: 4px;
-            transition: transform 0.2s ease;
-        }
-
-        .dynamic-fav-icon:hover {
-            transform: scale(1.15);
-        }
-
-        /* CLEAN WIKIPEDIA FOOTER LAYER */
-        footer {
-            height: 60px;
+            border-top: 1px solid #a2a9b1;
+            background-color: #f8f9fa;
+            padding: 20px 10%;
+            margin-top: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 40px;
-            border-top: 1px solid #a2a9b1;
-            background-color: #f8f9fa;
-            margin-top: 40px;
+            gap: 35px;
+            flex-wrap: wrap;
         }
 
-        footer a {
-            color: #3366cc;
+        .footer-link-block {
+            display: flex;
+            align-items: center;
+            gap: 6px;
             text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s ease;
+            color: #3366cc;
+            font-size: 13px;
+            font-weight: 500;
+            transition: transform 0.2s ease, color 0.2s ease;
         }
 
-        footer a:hover {
+        .footer-link-block:hover {
             color: #202122;
             text-decoration: underline;
+            transform: translateY(-2px);
         }
 
-        /* ALL DEVICE AUTO-FIX ARCHITECTURE (ZERO GAP BREAKDOWN) */
+        .footer-dynamic-favicon {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+            border-radius: 2px;
+        }
+
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -349,10 +524,11 @@
                 gap: 8px;
             }
             #survey-box {
-                position: static;
-                transform: none;
-                margin: 4px 0;
-                width: 100%;
+                position: fixed;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 90%;
             }
             nav {
                 gap: 15px;
@@ -361,9 +537,15 @@
                 padding-top: 110px;
             }
             .home-container {
-                flex-direction: column; /* Mobile validation: pic shifts center automatically */
+                flex-direction: column;
                 align-items: center;
-                text-align: center;
+                gap: 25px;
+            }
+            .wiki-sidebar {
+                width: 100%;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
                 gap: 20px;
             }
             .input-row {
@@ -375,11 +557,9 @@
                 gap: 12px;
                 align-items: center;
             }
-            .comment-form button {
-                width: 100%;
-            }
-            .dynamic-favicon-wrapper {
-                gap: 12px;
+            .dynamic-horizontal-footer {
+                gap: 20px;
+                padding: 15px;
             }
         }
     </style>
@@ -390,9 +570,8 @@
         <a href="#home" class="logo">ASIB ISLAM</a>
         
         <div id="survey-box">
-            <p id="survey-question">Do you know me?</p>
-            <div class="survey-options-row" id="survey-options-container">
-                </div>
+            <p id="survey-question"></p>
+            <div class="survey-options-row" id="survey-options-container"></div>
         </div>
 
         <nav>
@@ -404,9 +583,54 @@
 
     <section id="home">
         <div class="home-container">
-            <div class="profile-wrapper">
-                <img src="your-photo-path.jpg" alt="Asib Islam" class="profile-pic">
+            <div class="wiki-sidebar">
+                <div class="profile-wrapper">
+                    <img src="your-photo-path.jpg" alt="Asib Islam" class="profile-pic">
+                </div>
+                <div class="meta-summary-card">
+                    <ul class="meta-list">
+                        <li>🕸️ OSINT</li>
+                        <li>🛡️ Cybersecurity</li>
+                        <li>🐾 Search Dog / Intelligence</li>
+                        <li>📈 Trading</li>
+                        <li>📊 SEO</li>
+                        <li>⚙️ IT & Tech</li>
+                        <li>🎬 Content Creator</li>
+                        <li>🛒 Digital Marketing / E-commerce</li>
+                    </ul>
+                    <div class="meta-info-grid">
+                        <div class="meta-info-item">
+                            <span>🇧🇩</span>
+                            <div class="meta-info-text">
+                                <span>Nationality</span>
+                                <strong>BANGLADESH</strong>
+                            </div>
+                        </div>
+                        <div class="meta-info-item">
+                            <span>📍</span>
+                            <div class="meta-info-text">
+                                <span>Location</span>
+                                <strong>GAZIRCHAT, DHAKA</strong>
+                            </div>
+                        </div>
+                        <div class="meta-info-item">
+                            <span>🗓️</span>
+                            <div class="meta-info-text">
+                                <span>Experience</span>
+                                <strong>2 YEAR</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mail-injection-box">
+                        <label>Mail</label>
+                        <div class="mail-input-wrapper">
+                            <img src="" id="providerFavicon" class="mail-provider-favicon" alt="">
+                            <span class="mail-static-text">contact@asib.dev</span>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <div class="home-text-block">
                 <h1>Asib Islam | Search Engine Visibility Specialist & Technical SEO Expert</h1>
                 <p class="content-text">
@@ -415,24 +639,50 @@
                 <p class="content-text">
                     This minimalist single-page infrastructure is meticulously engineered to prioritize high-efficiency <strong>frontend optimization</strong> and flawless cross-device layout mapping. By discarding non-semantic bloatware, my methodologies optimize organic crawling rates, lock search positioning strategies, and guide sustainable digital footprint expansion.
                 </p>
+                <h2 style="font-size: 18px; margin-top: 20px; border-bottom: none; padding-bottom: 0;">My Vision & Professional Journey</h2>
+                <p class="content-text">
+                    My core ambition focuses on leading specialized technical groups capable of implementing aggressive organic visibility roadmaps, complex open-source data cross-examination infrastructure, and automated risk mitigation scripts. Dedicated to executing highly detailed technical parameters, my ongoing structural blueprint is targeted toward maximizing indexing velocities, optimizing technical systems architecture, and establishing long-term passive equity asset structures.
+                </p>
             </div>
         </div>
     </section>
 
     <section id="about">
         <h2>About Me & Technical Expertise</h2>
-        <p class="content-text">
-            Operating across modern data environments requires absolute analytical precision. My strategic workflows are built around systematic structural execution, ensuring comprehensive guide architectures for asset expansion, security frameworks, and network visibility.
-        </p>
-        <p class="content-text">
-            <strong>Web Development & SEO Infrastructure:</strong> Experienced in creating highly search-semantic codebases utilizing advanced HTML5 structural layouts and tailored CSS layouts. As a <strong>Search Engine Visibility Specialist</strong>, I audit technical parameters including site velocity indicators, layout shifting anomalies, canonical hierarchies, and structural JSON-LD schemas to ensure maximum indexing efficiency.
-        </p>
-        <p class="content-text">
-            <strong>Cyber Security & OSINT Systems:</strong> Specializing in advanced Open Source Intelligence (<strong>OSINT</strong>) matrix workflows and systematic digital foot-printing analytics. My methodologies integrate automated information-gathering modules, online privacy infrastructure audits, security assessments, and deep data extraction mechanics to investigate and secure digital assets.
-        </p>
-        <p class="content-text">
-            <strong>Financial Analytics & Trading Ecosystems:</strong> Serving as an active <strong>technical market analyst</strong>. Proficient in diagnosing multi-frame price action metrics and volumetric diagnostics. My management protocols span active algorithmic setup implementations along with long-term passive systematic auto-invest strategies designed for stable equity growth.
-        </p>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>OSINT Systems</h3>
+                <p class="content-text-short">Specializing in Open Source Intelligence frameworks, tracking algorithms, and deep open database querying mechanics.</p>
+            </div>
+            <div class="about-card">
+                <h3>Cybersecurity</h3>
+                <p class="content-text-short">Focusing on modern threat vector prevention, systematic footprint validation, and digital asset defense parameters.</p>
+            </div>
+            <div class="about-card">
+                <h3>Search Dog / Intelligence</h3>
+                <p class="content-text-short">Deploying advanced custom targeting parameters, algorithmic crawling scripts, and automated information retrieval systems.</p>
+            </div>
+            <div class="about-card">
+                <h3>Trading Systems</h3>
+                <p class="content-text-short">Analyzing macro financial setups, high-precision price action triggers, volume flow metrics, and passive auto-invest logic.</p>
+            </div>
+            <div class="about-card">
+                <h3>Technical SEO</h3>
+                <p class="content-text-short">Optimizing web crawling semantic loops, rendering efficiency logs, structural data validation, and core performance architectures.</p>
+            </div>
+            <div class="about-card">
+                <h3>IT & Tech Stack</h3>
+                <p class="content-text-short">Building semantic and standard HTML5 logic models, production layout engines, and cross-platform architecture grids.</p>
+            </div>
+            <div class="about-card">
+                <h3>Content Creation</h3>
+                <p class="content-text-short">Structuring systematic layouts, responsive design visuals, mobile-optimized asset frameworks, and media flow optimization.</p>
+            </div>
+            <div class="about-card">
+                <h3>Digital Marketing & E-commerce</h3>
+                <p class="content-text-short">Structuring behavioral intent mapping, search optimization loops, customer lifecycle schemas, and data tracking conversion metrics.</p>
+            </div>
+        </div>
     </section>
 
     <section id="contact">
@@ -447,10 +697,14 @@
         <div class="comment-section">
             <form class="comment-form" id="msgForm" action="https://formspree.io/f/your_id_here" method="POST" enctype="multipart/form-data">
                 <div class="input-row">
-                    <input type="text" id="visitorName" name="Name" placeholder="Your Name (Optional)">
+                    <input type="text" id="visitorName" name="Name" placeholder="Your Name (Required Field)">
                     <input type="text" id="visitorEmail" name="Link_or_Email" placeholder="Your Popular Profile Link / Email (Optional)">
                 </div>
-                <textarea id="visitorMsg" name="Message" placeholder="Write your thoughts or paste images/text data here... (Required Field)"></textarea>
+                
+                <div class="textarea-container">
+                    <textarea id="visitorMsg" name="Message" placeholder="Write your thoughts or paste images/text data here... (Required Field)"></textarea>
+                    <button type="submit" class="send-aero-btn">✈️</button>
+                </div>
                 
                 <div class="form-actions">
                     <div class="file-input-wrapper">
@@ -458,20 +712,16 @@
                         <input type="file" id="fileField" name="Attachment" onchange="fileSelected()">
                         <span id="file-chosen">No file chosen</span>
                     </div>
-                    <button type="submit">Send Message</button>
                 </div>
             </form>
             <div id="success-msg"></div>
         </div>
-
-        <div class="dynamic-favicon-wrapper" id="faviconContainer">
-            </div>
     </section>
 
-    <footer>
-        <a href="mailto:your-email@gmail.com">Email Contact</a>
-        <a href="https://facebook.com/yourprofile" target="_blank">Facebook Profile</a>
-        <a href="https://reddit.com/user/yourprofile" target="_blank">Reddit Link</a>
+    <footer class="dynamic-horizontal-footer" id="dynamicFooter">
+        <a href="mailto:your-email@gmail.com" class="footer-link-block">your-email@gmail.com</a>
+        <a href="https://facebook.com/yourprofile" class="footer-link-block">facebook.com/yourprofile</a>
+        <a href="https://reddit.com/user/yourprofile" class="footer-link-block">reddit.com/user/yourprofile</a>
     </footer>
 
     <script>
@@ -480,14 +730,12 @@
         const surveyBox = document.getElementById('survey-box');
         const surveyQuestion = document.getElementById('survey-question');
         const surveyOptionsContainer = document.getElementById('survey-options-container');
-        const visitorEmailField = document.getElementById('visitorEmail');
-        const faviconContainer = document.getElementById('faviconContainer');
+        const providerFavicon = document.getElementById('providerFavicon');
+        const staticMailText = document.querySelector('.mail-static-text');
+        const dynamicFooter = document.getElementById('dynamicFooter');
         
-        let contactSurveyTriggered = false;
-        let timeSurveyTriggered = false;
         let surveyTimer;
 
-        // AUTOMATIC DEVICE/BROWSER SCRAPING LOGGER (Invisible Tracking Mechanism)
         window.addEventListener('load', () => {
             const trackingData = {
                 screenResolution: `${window.screen.width}x${window.screen.height}`,
@@ -500,13 +748,58 @@
                 referrer: document.referrer || 'Direct Visit',
                 timestamp: new Date().toISOString()
             };
-            // This silent structure seamlessly channels raw metadata into Clarity tracking layers
             if(window.clarity) {
                 window.clarity("set", "device_fingerprint", JSON.stringify(trackingData));
             }
+
+            if (staticMailText && staticMailText.textContent) {
+                let mailStr = staticMailText.textContent.trim();
+                let splitArr = mailStr.split('@');
+                if (splitArr.length > 1) {
+                    let domain = splitArr[1];
+                    providerFavicon.src = `https://www.google.com/s2/favicons?sz=32&domain=${domain}`;
+                    providerFavicon.style.display = 'block';
+                }
+            }
+
+            buildFooterFavicons();
+
+            setTimeout(() => {
+                if (!sessionStorage.getItem('survey5sDone')) {
+                    showSurvey("Do you know me?", ["Yes", "No", "May be"], 'survey5sDone');
+                }
+            }, 5000);
+
+            setTimeout(() => {
+                if (!sessionStorage.getItem('survey30sDone')) {
+                    showSurvey("Is it interesting?", ["Yes", "No", "May be"], 'survey30sDone');
+                }
+            }, 30000);
         });
 
-        // FIXED NAVIGATION STATE AND TRIGGER ONE (CONTACT LOCATION TARGET)
+        function buildFooterFavicons() {
+            const footerLinks = dynamicFooter.querySelectorAll('.footer-link-block');
+            footerLinks.forEach(link => {
+                try {
+                    let hrefVal = link.getAttribute('href');
+                    let domain = '';
+                    if (hrefVal.startsWith('mailto:')) {
+                        domain = hrefVal.split('@')[1];
+                    } else {
+                        let urlObj = new URL(hrefVal);
+                        domain = urlObj.hostname.replace('www.', '');
+                    }
+                    if (domain) {
+                        const img = document.createElement('img');
+                        img.src = `https://www.google.com/s2/favicons?sz=32&domain=${domain}`;
+                        img.className = 'footer-dynamic-favicon';
+                        img.onerror = function() { this.remove(); };
+                        link.insertBefore(img, link.firstChild);
+                    }
+                } catch(e) {}
+            });
+        }
+
         window.addEventListener('scroll', () => {
             let current = '';
             sections.forEach(section => {
@@ -522,30 +815,8 @@
                     link.classList.add('active');
                 }
             });
-
-            // FIRST SURVEY TRIGGER: Contact page a asar por exact 5 second thakbe
-            if (current === 'contact' && !contactSurveyTriggered && !timeSurveyTriggered) {
-                contactSurveyTriggered = true;
-                if(!sessionStorage.getItem('contactSurveyDone')) {
-                    showSurvey("Do you know me?", ["Yes", "No", "May be"], 'contactSurveyDone');
-                }
-            } else if (current !== 'contact' && contactSurveyTriggered) {
-                if(surveyBox.getAttribute('data-current-survey') === 'contactSurveyDone') {
-                    surveyBox.style.display = 'none';
-                    clearTimeout(surveyTimer);
-                }
-            }
         });
 
-        // SECOND SURVEY TRIGGER: 30 Seconds Time-on-Site Trigger logic on all pages
-        setTimeout(() => {
-            if (surveyBox.style.display !== 'flex' && !sessionStorage.getItem('timeSurveyDone')) {
-                timeSurveyTriggered = true;
-                showSurvey("Is it interesting?", ["Yes", "No", "May be"], 'timeSurveyDone');
-            }
-        }, 30000);
-
-        // SURVEY RENDER AND TIMER LOGIC
         function showSurvey(questionText, optionsArray, storageKey) {
             clearTimeout(surveyTimer);
             
@@ -563,7 +834,7 @@
 
             surveyTimer = setTimeout(() => {
                 surveyBox.style.display = 'none';
-            }, 5000);
+            }, 6000);
         }
 
         function handleSurveyClick(storageKey, chosenVal) {
@@ -571,19 +842,24 @@
             surveyBox.style.display = 'none';
             sessionStorage.setItem(storageKey, 'true');
             if(window.clarity) {
-                window.clarity("event", `survey_${storageKey}_selection`, { value: chosenVal });
+                window.clarity("event", `${storageKey}_selection`, { value: chosenVal });
             }
         }
 
-        // CONTROL ATTACHMENT STRING UPDATE
         function fileSelected() {
             const fileField = document.getElementById('fileField');
             const fileChosen = document.getElementById('file-chosen');
             fileChosen.textContent = fileField.files[0] ? fileField.files[0].name : "No file chosen";
         }
 
-        // SMART CLIPBOARD INTERCEPTOR TRICK (Image/File Clipboard Drop Mechanics)
         document.getElementById('visitorMsg').addEventListener('paste', function(e) {
+            const nameInput = document.getElementById('visitorName').value.trim();
+            if (nameInput === "") {
+                e.preventDefault();
+                alert("Please write your Name first before pasting any text or image/file data.");
+                return;
+            }
+
             const items = (e.clipboardData || e.originalEvent.clipboardData).items;
             for (let index in items) {
                 const item = items[index];
@@ -600,48 +876,32 @@
             }
         });
 
-        // INFINITE FAVICON HORIZONTAL EXTRACTOR LOGIC
-        function extractAndInjectFavicon(urlValue) {
-            if(!urlValue) return;
-            try {
-                // Ensure protocol exists for URL parsing mechanics
-                let cleanUrl = urlValue.trim();
-                if (!/^https?:\/\//i.test(cleanUrl)) {
-                    cleanUrl = 'https://' + cleanUrl;
-                }
-                const parsedUrl = new URL(cleanUrl);
-                const hostname = parsedUrl.hostname.replace('www.', '');
-                
-                // Check duplicate check to avoid flooding identical logs
-                if (document.querySelector(`img[data-domain="${hostname}"]`)) return;
-
-                // Secure Light Official Google Favicon API Delivery Framework
-                const faviconUrl = `https://www.google.com/s2/favicons?sz=64&domain=${hostname}`;
-                
-                const imgElement = document.createElement('img');
-                imgElement.src = faviconUrl;
-                imgElement.className = 'dynamic-fav-icon';
-                imgElement.setAttribute('data-domain', hostname);
-                imgElement.alt = hostname;
-                imgElement.onerror = function() { this.remove(); }; // Broken link default remove rules
-                
-                faviconContainer.appendChild(imgElement);
-            } catch (e) {
-                // Smooth ignore if raw input string is not an authentic URL framework
+        document.getElementById('fileField').addEventListener('click', function(e) {
+            const nameInput = document.getElementById('visitorName').value.trim();
+            if (nameInput === "") {
+                e.preventDefault();
+                alert("Please write your Name first before attaching files.");
             }
-        }
-
-        // Trigger favicon extraction when input loses focus (User-friendly mechanism)
-        visitorEmailField.addEventListener('blur', function() {
-            extractAndInjectFavicon(this.value);
         });
 
-        // STRICT FORM HANDLING RULES (Empty protection & dynamic success notification)
+        document.getElementById('visitorMsg').addEventListener('keydown', function(e) {
+            const nameInput = document.getElementById('visitorName').value.trim();
+            if (nameInput === "") {
+                e.preventDefault();
+                alert("Please write your Name first before typing any thoughts.");
+            }
+        });
+
         document.getElementById('msgForm').addEventListener('submit', function(event) {
             const nameInput = document.getElementById('visitorName').value.trim();
-            const emailLinkInput = document.getElementById('visitorEmail').value.trim();
             const msgInput = document.getElementById('visitorMsg').value.trim();
             const successMsg = document.getElementById('success-msg');
+
+            if (nameInput === "") {
+                event.preventDefault();
+                alert("Name field is compulsory. Please enter your name.");
+                return;
+            }
 
             if (msgInput === "") {
                 event.preventDefault(); 
@@ -649,15 +909,9 @@
                 return; 
             }
 
-            // Fallback backup injection logic during form submit process
-            extractAndInjectFavicon(emailLinkInput);
+            event.preventDefault(); 
 
-            if (nameInput !== "") {
-                successMsg.innerText = `Thank's For Message, ${nameInput}!`;
-            } else {
-                successMsg.innerText = "Thank's For Message!";
-            }
-            
+            successMsg.innerText = `Thank's for message ${nameInput}, your message is properly send`;
             successMsg.style.display = "block";
             
             setTimeout(() => {
