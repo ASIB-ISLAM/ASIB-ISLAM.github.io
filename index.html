@@ -139,15 +139,19 @@
     </p>
   </div>
 
-  <form class="contact-form">
+<form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
 
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <input type="text" placeholder="Subject">
+    <input type="hidden" name="access_key" value="c85616e1-1411-4561-82b9-4684682e8ecf">
+    
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="subject" placeholder="Subject">
 
-    <textarea placeholder="Write your message..."></textarea>
+    <textarea name="message" placeholder="Write your message..." required></textarea>
 
-    <input type="file">
+    <input type="file" name="attachment" accept="image/*,.pdf,.doc,.docx,.jpg,.png,.exc,.text,.zip">
+
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
     <button type="submit">Send Message</button>
 
