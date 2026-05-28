@@ -1,18 +1,43 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asib Islam | Search Engine Visibility Specialist & Technical SEO Expert</title>
     <style>
+        /* -------------------------------------------------------------------------- */
+        /* 1. CORE & GLOBAL BASE STYLES                                               */
+        /* -------------------------------------------------------------------------- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             background-color: #ffffff;
             color: #202122;
             line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Lato, Helvetica, Arial, sans-serif;
             font-size: 14px;
             padding-top: 50px;
+            width: 100%;
+            overflow-x: hidden;
         }
 
+        strong {
+            color: #000000;
+        }
+
+        /* -------------------------------------------------------------------------- */
+        /* 2. NAVIGATION HEADER ARCHITECTURE                                          */
+        /* -------------------------------------------------------------------------- */
         header {
             position: fixed;
             top: 0;
@@ -51,17 +76,24 @@
             transition: all 0.2s ease;
         }
 
-        nav a:hover, nav a.active {
+        nav a:hover {
             color: #202122;
             border-bottom: 2px solid #3366cc;
         }
 
+        /* -------------------------------------------------------------------------- */
+        /* 3. LAYOUT & RESPONSIVE SECTION ENGINE                                      */
+        /* -------------------------------------------------------------------------- */
         section {
-            padding: 50px 10%;
-            min-height: 80vh;
-            border-bottom: 1px solid #eaecf0;
-            max-width: 1100px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 1280px;
+            min-height: 300vh; /* স্ক্রিনশটের রিকোয়ারমেন্ট অনুযায়ী ফুল স্ক্রিন লক */
             margin: 0 auto;
+            padding: 80px 20px 40px 20px; /* ওভারল্যাপ এড়াতে টপ প্যাডিং ৮১ পিক্সেল */
+            border-bottom: 1px solid #eaecf0;
         }
 
         h1, h2, h3 {
@@ -69,12 +101,12 @@
             font-weight: normal;
             border-bottom: 1px solid #a2a9b1;
             padding-bottom: 5px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         h1 { font-size: 24px; }
         h2 { font-size: 20px; }
-        h3 { font-size: 16px; border-bottom: none; margin-bottom: 8px; font-weight: bold; }
+        h3 { font-size: 16px; border-bottom: none; margin-bottom: 6px; font-weight: bold; }
 
         .content-text {
             color: #202122;
@@ -90,10 +122,9 @@
             text-align: justify;
         }
 
-        strong {
-            color: #000000;
-        }
-
+        /* -------------------------------------------------------------------------- */
+        /* 4. HOME BIOGRAPHY COMPONENT                                                */
+        /* -------------------------------------------------------------------------- */
         .home-container {
             display: flex;
             align-items: flex-start;
@@ -122,7 +153,7 @@
             border: 1px solid #a2a9b1;
             object-fit: cover;
             aspect-ratio: 1 / 1;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .profile-pic:hover {
@@ -154,7 +185,7 @@
             gap: 8px;
             color: #202122;
             font-weight: 500;
-            transition: transform 0.2s ease, padding-left 0.2s ease;
+            transition: transform 0.2s ease, color 0.2s ease;
         }
 
         .meta-list li:hover {
@@ -198,6 +229,7 @@
             display: flex;
             flex-direction: column;
             gap: 5px;
+            margin-top: 3px;
         }
 
         .mail-input-wrapper {
@@ -215,13 +247,6 @@
             border-color: #3366cc;
         }
 
-        .mail-provider-favicon {
-            width: 16px;
-            height: 16px;
-            object-fit: contain;
-            display: none;
-        }
-
         .mail-static-text {
             font-size: 12px;
             color: #3366cc;
@@ -235,26 +260,32 @@
             flex-grow: 1;
         }
 
+        /* -------------------------------------------------------------------------- */
+        /* 5. EXPERTISE GRID & ANIMATED CARDS                                         */
+        /* -------------------------------------------------------------------------- */
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
-            margin-top: 20px;
+            margin-top: 10px;
+            width: 100%;
         }
 
         .about-card {
             background: #ffffff;
             border-left: 3px solid #3366cc;
-            padding-left: 15px;
-            margin-bottom: 5px;
-            transition: transform 0.2s ease, border-left-color 0.2s ease;
+            padding: 2px 0 2px 15px;
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-left-color 0.2s ease;
         }
 
         .about-card:hover {
-            transform: translateX(5px);
+            transform: translateX(6px);
             border-left-color: #202122;
         }
 
+        /* -------------------------------------------------------------------------- */
+        /* 6. PERSISTENT HORIZONTAL FOOTER                                            */
+        /* -------------------------------------------------------------------------- */
         .dynamic-horizontal-footer {
             width: 100%;
             border-top: 1px solid #a2a9b1;
@@ -292,6 +323,9 @@
             border-radius: 2px;
         }
 
+        /* -------------------------------------------------------------------------- */
+        /* 7. RIGID RESPONSIVE MOBILE MEDIA QUERIES                                   */
+        /* -------------------------------------------------------------------------- */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -299,24 +333,36 @@
                 padding: 10px;
                 gap: 8px;
             }
+
             nav {
                 gap: 15px;
             }
+
             body {
                 padding-top: 110px;
             }
+
+            section {
+                padding: 30px 15px;
+                gap: 20px;
+                min-height: auto; /* মোবাইলে অতিরিক্ত ডেসক্রিপশনের জন্য অটো লেন্থ সাপোর্ট */
+            }
+
             .home-container {
                 flex-direction: column;
                 align-items: center;
                 gap: 25px;
             }
+
             .wiki-sidebar {
                 width: 100%;
             }
+
             .about-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* মোবাইল ভিউতে কার্ডগুলো নিচে নিচে সোজা থাকবে */
                 gap: 20px;
             }
+
             .dynamic-horizontal-footer {
                 gap: 20px;
                 padding: 15px;
@@ -329,7 +375,7 @@
     <header>
         <a href="#home" class="logo">ASIB ISLAM</a>
         <nav>
-            <a href="#home" class="nav-link active">Home</a>
+            <a href="#home" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About</a>
             <a href="#contact" class="nav-link">Contact</a>
         </nav>
@@ -354,7 +400,6 @@
                                 <span>Mail</span>
                                 <div class="mail-injection-box">
                                     <div class="mail-input-wrapper">
-                                        <img src="" class="mail-provider-favicon" alt="">
                                         <span class="mail-static-text">asibislam277@gmail.com</span>
                                     </div>
                                 </div>
@@ -422,27 +467,5 @@
         </a>
     </footer>
 
-    <script>
-        // Smooth navigation & active state management for Header
-        const links = document.querySelectorAll('nav a');
-        const sections = document.querySelectorAll('section');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= (sectionTop - 60)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            links.forEach(a => {
-                a.classList.remove('active');
-                if (a.getAttribute('href').slice(1) === current) {
-                    a.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
