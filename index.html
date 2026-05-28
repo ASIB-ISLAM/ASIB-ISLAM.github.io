@@ -138,11 +138,13 @@
       or research discussion? Feel free to contact me.
     </p>
   </div>
- <form action="https://api.web3forms.com/submit" method="POST" id="form" class="contact-form">
+ <form action="https://api.web3forms.com/submit" method="POST" id="form" class="contact-form" autocomplete="off">
+
     <input type="hidden" name="access_key" value="c0bf7dfc-a2cd-4ddc-81a7-5d5cc43ca115">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="text" name="subject" placeholder="Subject">
+    
+    <input type="text" name="name" placeholder="Your Name" autocomplete="new-password" required>
+    <input type="email" name="email" placeholder="Your Email" autocomplete="new-password" required>
+    <input type="text" name="subject" placeholder="Subject" autocomplete="new-password">
 
     <textarea name="message" placeholder="Write your message..." required></textarea>
 
