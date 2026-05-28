@@ -63,4 +63,49 @@ function eraseEffect(){
   }
 }
 
+const contactForm = document.getElementById('form');
+const resultText = document.getElementById('result');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault(); 
+    
+    const formData = new FormData(contactForm);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+    resultText.innerHTML = "Sending...";
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            if (response.status == 200) {
+                resultText.innerHTML = "Message Sent Successfully!";
+                contactForm.reset(); 
+                
+                
+                if (window.navigator && window.navigator.clearData) {
+                    window.navigator.clearData();
+                }
+            } else {
+                let res = await response.json();
+                resultText.innerHTML = res.message;
+            }
+        })
+        .catch(error => {
+            resultText.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
+            setTimeout(() => {
+                resultText.innerHTML = "";
+            }, 4000); 
+        });
+  });
+}
+
 window.onload = typeEffect;
