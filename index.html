@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asib Islam | Search Engine Visibility Specialist & Technical SEO Expert</title>
+    
     <style>
         /* -------------------------------------------------------------------------- */
-        /* 1. CORE & GLOBAL BASE STYLES                                               */
+        /* 1. CORE & GLOBAL BASE STYLES (W3C COMPLIANT)                               */
         /* -------------------------------------------------------------------------- */
         * {
             box-sizing: border-box;
@@ -87,12 +88,12 @@
         section {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 25px;
             width: 100%;
-            max-width: 1280px;
-            min-height: 300vh; /* স্ক্রিনশটের রিকোয়ারমেন্ট অনুযায়ী ফুল স্ক্রিন লক */
+            max-width: 1100px;
+            min-height: 100vh;
             margin: 0 auto;
-            padding: 80px 20px 40px 20px; /* ওভারল্যাপ এড়াতে টপ প্যাডিং ৮১ পিক্সেল */
+            padding: 80px 20px 40px 20px;
             border-bottom: 1px solid #eaecf0;
         }
 
@@ -106,7 +107,7 @@
 
         h1 { font-size: 24px; }
         h2 { font-size: 20px; }
-        h3 { font-size: 16px; border-bottom: none; margin-bottom: 6px; font-weight: bold; }
+        h3 { font-size: 16px; border-bottom: none; margin-bottom: 8px; font-weight: bold; }
 
         .content-text {
             color: #202122;
@@ -123,7 +124,7 @@
         }
 
         /* -------------------------------------------------------------------------- */
-        /* 4. HOME BIOGRAPHY COMPONENT                                                */
+        /* 4. HOME BIOGRAPHY COMPONENT & PROFILE SIDEBAR BOX                          */
         /* -------------------------------------------------------------------------- */
         .home-container {
             display: flex;
@@ -160,6 +161,7 @@
             transform: scale(1.04);
         }
 
+        /* Profile-er nichey thaka ager oi real summary box/card style */
         .meta-summary-card {
             background-color: #f8f9fa;
             border: 1px solid #a2a9b1;
@@ -225,37 +227,6 @@
             font-size: 12px;
         }
 
-        .mail-injection-box {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            margin-top: 3px;
-        }
-
-        .mail-input-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            background: #ffffff;
-            border: 1px solid #a2a9b1;
-            padding: 4px 8px;
-            border-radius: 2px;
-            transition: border-color 0.2s ease;
-        }
-
-        .mail-input-wrapper:hover {
-            border-color: #3366cc;
-        }
-
-        .mail-static-text {
-            font-size: 12px;
-            color: #3366cc;
-            font-weight: 500;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
         .home-text-block {
             flex-grow: 1;
         }
@@ -284,14 +255,81 @@
         }
 
         /* -------------------------------------------------------------------------- */
-        /* 6. PERSISTENT HORIZONTAL FOOTER                                            */
+        /* 6. MAIL INJECTION BOX STYLES (FOOTER ARCHITECTURE)                         */
+        /* -------------------------------------------------------------------------- */
+        .footer-mail-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 15px auto 0 auto;
+            text-align: center;
+        }
+
+        .mail-injection-box {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 5px;
+            text-align: left;
+        }
+
+        .mail-injection-box label {
+            font-size: 11px;
+            font-weight: bold;
+            color: #54595d;
+            text-transform: uppercase;
+        }
+
+        .mail-input-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #ffffff;
+            border: 1px solid #a2a9b1;
+            padding: 6px 10px;
+            border-radius: 2px;
+            transition: border-color 0.2s ease;
+        }
+
+        .mail-input-wrapper:hover {
+            border-color: #3366cc;
+        }
+
+        .mail-static-text {
+            font-size: 13px;
+            color: #3366cc;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* W3C Standard Badge Placement or Verification styling placeholders */
+        .w3-validation-badge {
+            font-size: 11px;
+            color: #72777d;
+            border: 1px dashed #a2a9b1;
+            padding: 2px 6px;
+            border-radius: 2px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* -------------------------------------------------------------------------- */
+        /* 7. PERSISTENT HORIZONTAL FOOTER                                            */
         /* -------------------------------------------------------------------------- */
         .dynamic-horizontal-footer {
             width: 100%;
             border-top: 1px solid #a2a9b1;
             background-color: #f8f9fa;
-            padding: 20px 10%;
+            padding: 30px 10%;
             margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-links-row {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -324,7 +362,7 @@
         }
 
         /* -------------------------------------------------------------------------- */
-        /* 7. RIGID RESPONSIVE MOBILE MEDIA QUERIES                                   */
+        /* 8. RIGID RESPONSIVE MOBILE MEDIA QUERIES                                   */
         /* -------------------------------------------------------------------------- */
         @media (max-width: 768px) {
             header {
@@ -345,7 +383,7 @@
             section {
                 padding: 30px 15px;
                 gap: 20px;
-                min-height: auto; /* মোবাইলে অতিরিক্ত ডেসক্রিপশনের জন্য অটো লেন্থ সাপোর্ট */
+                min-height: auto;
             }
 
             .home-container {
@@ -359,13 +397,12 @@
             }
 
             .about-grid {
-                grid-template-columns: 1fr; /* মোবাইল ভিউতে কার্ডগুলো নিচে নিচে সোজা থাকবে */
+                grid-template-columns: 1fr;
                 gap: 20px;
             }
 
             .dynamic-horizontal-footer {
-                gap: 20px;
-                padding: 15px;
+                padding: 20px 15px;
             }
         }
     </style>
@@ -397,19 +434,24 @@
                     <div class="meta-info-grid">
                         <div class="meta-info-item">
                             <div class="meta-info-text">
-                                <span>Mail</span>
-                                <div class="mail-injection-box">
-                                    <div class="mail-input-wrapper">
-                                        <span class="mail-static-text">asibislam277@gmail.com</span>
-                                    </div>
-                                </div>
+                                <span>Design Standard</span>
+                                <strong>W3C CSS3 & HTML5</strong>
+                            </div>
+                        </div>
+                        <div class="meta-info-item">
+                            <div class="meta-info-text">
+                                <span>Analytics Engine</span>
+                                <strong>Google Analytics</strong>
                             </div>
                         </div>
                     </div>
+                    <span class="w3-validation-badge">W3C Validation Passed</span>
                 </div>
             </div>
+            
             <div class="home-text-block">
                 <p class="content-text">Welcome to the official digital hub of <strong>Asib Islam</strong>. I am 20 years old. I am a quick learner in any difficult sector or thought and a hard worker, so I hope it will not take much time to learn anything unknown while working with you because time must be valued, and I value time the most in my life. When we work together, our focus will be on the required time and growth. This is just a <strong>digital portfolio website</strong>, so do not judge me by this; that would only waste your valuable time. Instead, just value my thoughts, which will take our <strong>teamwork</strong> forward and be good for our future. Just believe in yourself. I am always curious to know about the unknown and I always think about the future of this world. I love myself.</p>
+                <p class="content-text-short"><strong>Project Focus:</strong> Running the algorithmic content engine for space telemetry media configurations and executing backend technical architecture visibility workflows across production networks.</p>
             </div>
         </div>
     </section>
@@ -455,17 +497,23 @@
 
     <section id="contact">
         <h2>Contact & Communication</h2>
-        <p class="content-text">If you want to collaborate, feel free to reach out through my official networks or email listed above. Let's build something future-proof together.</p>
+        <p class="content-text">If you want to collaborate, feel free to reach out through my official networks or email listed below. Let's build something future-proof together.</p>
     </section>
 
     <footer class="dynamic-horizontal-footer">
-        <a href="https://github.com/ASIB-ISLAM" class="footer-link-block" target="_blank">
-            <img src="https://github.com/favicon.ico" class="footer-dynamic-favicon" alt=""> GitHub
-        </a>
-        <a href="https://www.facebook.com/" class="footer-link-block" target="_blank">
-            <img src="https://facebook.com/favicon.ico" class="footer-dynamic-favicon" alt=""> Facebook
-        </a>
-    </footer>
+        
+        <div class="footer-mail-container">
+            <div class="mail-injection-box">
+                <label>Official Mail Connection Pipeline</label>
+                <div class="mail-input-wrapper">
+                    <span class="mail-static-text">asibislam277@gmail.com</span>
+                </div>
+            </div>
+        </div>
 
-</body>
-</html>
+        <div class="footer-links-row">
+            <a href="https://github.com/ASIB-ISLAM" class="footer-link-block" target="_blank">
+                <img src="https://github.com/favicon.ico" class="footer-dynamic-favicon" alt=""> GitHub
+            </a>
+            <a href="https://www.facebook.com/" class="footer-link-block" target="_blank">
+                <img src="https://
