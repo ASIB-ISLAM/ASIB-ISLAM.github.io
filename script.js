@@ -22,7 +22,7 @@ window.addEventListener('scroll', () => {
 });
 
 const roles = [
-  'ASIB SORKER',
+  'ASIB SORKAR',
   'Technical SEO Expert',
   'OSINT Researcher',
   'Search Visibility Strategist',
