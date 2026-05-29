@@ -22,10 +22,11 @@ window.addEventListener('scroll', () => {
 });
 
 const roles = [
+  'ASIB SORKER',
   'Technical SEO Expert',
   'OSINT Researcher',
-  'Digital Intelligence Specialist',
-  'Search Visibility Strategist'
+  'Search Visibility Strategist',
+  
 ];
 
 let roleIndex = 0;
