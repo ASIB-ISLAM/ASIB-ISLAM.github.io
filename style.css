@@ -187,9 +187,10 @@ body::before{
 
 .about-intro{
   max-width:800px;
-  line-height:1.9;
+  line-height:1.6;
   color:#cfcfcf;
   text-align: justify;
+  margin: 0 auto;
 }
 
 .about-grid{
