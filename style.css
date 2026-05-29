@@ -303,6 +303,9 @@ body::before{
 .footer p{
   color:#777;
 }
+footer a i {
+    margin-right: 6px; 
+}
 
 @media(max-width:768px){
 
