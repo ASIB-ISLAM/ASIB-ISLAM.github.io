@@ -189,6 +189,7 @@ body::before{
   max-width:800px;
   line-height:1.9;
   color:#cfcfcf;
+  text-align: justify;
 }
 
 .about-grid{
