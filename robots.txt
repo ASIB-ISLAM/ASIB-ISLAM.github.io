@@ -1,0 +1,3 @@
+User-agent: *
+Allow: / 
+Sitemap: https://asib-islam.github.io/sitemap.xml
