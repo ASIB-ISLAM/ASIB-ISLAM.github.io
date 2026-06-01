@@ -25,7 +25,7 @@ const roles = [
   'ASIB SORKAR',
   'Technical SEO Expert',
   'GEO Expert',
-  'OSINT Expert,
+  'OSINT Expert',
   'Search Visibility Strategist',
   'Generative Engine Optimization',
   
