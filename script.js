@@ -27,7 +27,7 @@ const roles = [
   'GEO Expert',
   'OSINT Expert,
   'Search Visibility Strategist',
-  'Generative Engine Optimization'
+  'Generative Engine Optimization',
   
 ];
 
