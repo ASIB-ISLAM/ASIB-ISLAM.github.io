@@ -23,7 +23,7 @@ window.addEventListener('scroll', () => {
 
 const roles = [
   'ASIB SORKAR',
-  'Technical SEO Expert',
+  'Technical SEO Specialist',
   'Search Visibility Strategist',
   'Generative Engine Optimization',
   
